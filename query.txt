@@ -70,7 +70,6 @@ FROM `courses`
  WHERE name = 'Pietro'
  AND surname = 'Rizzo' ;
 
-
  11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9 
 
  DELETE FROM `students` WHERE id = 5001;
