@@ -17,5 +17,12 @@ SELECT exam_id, ROUND(AVG(vote),2) AS vote_avg
 FROM exam_student
 GROUP BY exam_id;
 
+avg si usa per la media
+round(2) in quesro caso per avere solo due numeri dopo la virgola  
 
-4. Contare quanti corsi di laurea ci sono per ogni dipartimentosle
+
+4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+SELECT department_id AS department_id , COUNT(*) AS number_corses
+FROM `degrees`
+GROUP BY department_id
