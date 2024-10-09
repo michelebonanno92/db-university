@@ -94,4 +94,5 @@ JOIN exams
 ON exam_student.exam_id = exams.id
 JOIN courses
 ON exams.course_id = courses.id
-GROUP BY students.id,students.name ,students.surname, courses.id, courses.name ;
+GROUP BY students.id,students.name ,students.surname, courses.id, courses.name 
+ORDER BY students.id ASC;
