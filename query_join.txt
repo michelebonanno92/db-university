@@ -85,3 +85,13 @@ ORDER BY teachers.id ASC;
 7. BONUS: Selezionare per ogni studente il numero di tentativi sostenuti
 per ogni esame, stampando anche il voto massimo. Successivamente,
 filtrare i tentativi con voto minimo 18.
+
+SELECT students.id, students.name, students.surname, courses.id, courses.name, COUNT(exam_student.vote) AS attempts_number_tentativi, MAX(exam_student.vote) AS max_vote , MIN(exam_student.vote) AS min_vote
+FROM `students`
+JOIN exam_student
+ON students.id = exam_student.student_id
+JOIN exams
+ON exam_student.exam_id = exams.id
+JOIN courses
+ON exams.course_id = courses.id
+GROUP BY students.id,students.name ,students.surname, courses.id, courses.name ;
